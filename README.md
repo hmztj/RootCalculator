@@ -1,4 +1,4 @@
-#RootCalculator
+#Root Calculator
 
 description: calculates the root of a selected function via four different mehtods i.e. Bisection, Secant, Newton Raphson's and False Position.
 
