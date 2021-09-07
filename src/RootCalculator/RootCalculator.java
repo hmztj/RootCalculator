@@ -3,7 +3,8 @@
  * Path: https://github.com/hmztj/RootCalculator
  * Created Date: Monday, September 6th 2021, 10:11:07 pm
  * Author: Hamza
- */
+ */ 
+
 package RootCalculator;
 
 import java.awt.Dimension;
@@ -21,7 +22,7 @@ public class RootCalculator {
         centreWindow(theView);
         CalcModel theModel = new CalcModel();
         CalcController theController = new CalcController(theView, theModel);
-        
+
         theView.setVisible(true);
 
     }
