@@ -6,6 +6,7 @@ import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
+
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.axis.NumberAxis;
@@ -19,8 +20,8 @@ import org.jfree.ui.RectangleInsets;
 public class CalcView extends JFrame { // Main Frame (all elements reside here)
 
     // Start of Declaration for all elements e.g buttons, panel, textfields...
-    private final JComboBox functions = new JComboBox();// combo box for function selection
-    private final JComboBox Methods = new JComboBox(); // combo boc for method selection
+    private final JComboBox<String> functions = new JComboBox<>();// combo box for function selection
+    private final JComboBox<String> methods = new JComboBox<>(); // combo boc for method selection
 
     private final JLabel xOneLabel = new JLabel("X₁:"); // label for first input value
     private final JTextField xOneInputField = new JTextField(6); // textfield for first input value
@@ -116,7 +117,7 @@ public class CalcView extends JFrame { // Main Frame (all elements reside here)
         // sets preffered size of combo boxes i.e functions and methods and other
         // componenets if needed
         functions.setPreferredSize(new Dimension(180, 24));
-        Methods.setPreferredSize(new Dimension(180, 24));
+        methods.setPreferredSize(new Dimension(180, 24));
         tableModel.setRowCount(50);
 
         rootTextField.setEditable(false);
@@ -128,15 +129,15 @@ public class CalcView extends JFrame { // Main Frame (all elements reside here)
         functions.addItem("e^x-3x");
 
         // Adds components to methods Combo Box.
-        Methods.addItem("Select Method");
-        Methods.addItem("Bisection Method");
-        Methods.addItem("Secant Method");
-        Methods.addItem("Newton Raphson's Method");
-        Methods.addItem("False Position Method");
+        methods.addItem("Select Method");
+        methods.addItem("Bisection Method");
+        methods.addItem("Secant Method");
+        methods.addItem("Newton Raphson's Method");
+        methods.addItem("False Position Method");
 
         // Adds different components to panel for a better gui handling
         ComboPanel.add(functions);
-        ComboPanel.add(Methods);
+        ComboPanel.add(methods);
         TextFieldPanel.add(xOneLabel);
         TextFieldPanel.add(xOneInputField);
         TextFieldPanel.add(xTwoLabel);
@@ -223,7 +224,7 @@ public class CalcView extends JFrame { // Main Frame (all elements reside here)
     // Gets the value of the selected item from Methods combo box
     public int getMethodsIndex() {
 
-        return Methods.getSelectedIndex();
+        return methods.getSelectedIndex();
 
     }
 
@@ -236,7 +237,7 @@ public class CalcView extends JFrame { // Main Frame (all elements reside here)
 
     public double get_xTwo() {
 
-        if (Methods.getSelectedIndex() != 3) {
+        if (methods.getSelectedIndex() != 3) {
 
             return Double.parseDouble(xTwoInputField.getText());
 
@@ -374,7 +375,7 @@ public class CalcView extends JFrame { // Main Frame (all elements reside here)
 
         graphDataSet.removeAllSeries();
         functions.setSelectedIndex(0);
-        Methods.setSelectedIndex(0);
+        methods.setSelectedIndex(0);
         xOneInputField.setText("");
         xTwoInputField.setText("");
         decimalTextField.setText("");
@@ -417,7 +418,7 @@ public class CalcView extends JFrame { // Main Frame (all elements reside here)
     // Action Listener for selected method.
     void addMethodComboListener(ActionListener listenForMethod) {
 
-        Methods.addActionListener(listenForMethod);
+        methods.addActionListener(listenForMethod);
 
     }
 
