@@ -1,7 +1,7 @@
 package RootCalculator;
 
 public class SNode {
-  // Instance variables:
+  // Instance variables.
   private final String[] element = new String[6];
   private SNode next;
   /** Creates a node with null references to its element and next node. */

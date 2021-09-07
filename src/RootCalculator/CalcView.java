@@ -53,7 +53,7 @@ public class CalcView extends JFrame { // Main Frame (all elements reside here)
     private final XYPlot plot = new XYPlot(graphDataSet, xAxis, yAxis, renderer); // plot method to create chart(graph)
 
     // Panels , Some Extra Panels to encapsulate the smaller components with the
-    // larger ones.
+    // larger ones..
     private final JPanel ComboPanel = new JPanel();
     private final JPanel TextFieldPanel = new JPanel();
     private final JPanel ButtonsPanel = new JPanel();

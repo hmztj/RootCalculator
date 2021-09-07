@@ -8,7 +8,7 @@ public class CalcModel {
     private int index; // iterations counter (Number of loops to get desired root apprixmation)
     private String[][] dataArray = new String[500][8]; // Array to store calculated values.
     final private SLinkedList dataList = new SLinkedList();
-    private XYSeries series, initialRange; // creates series of x and y values for graphical dataset
+    private XYSeries series, initialRange; // creates series of x and y values for graphical dataset.
 
     public XYSeries getInitialRange() {
 

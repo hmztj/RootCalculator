@@ -6,7 +6,7 @@ import org.jfree.data.xy.XYSeries;
 
 /* 
    The Controller coordinates interactions
-   between the View and Model
+   between the View and Model.
  */
 public class CalcController {
 

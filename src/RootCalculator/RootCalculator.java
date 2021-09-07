@@ -21,6 +21,7 @@ public class RootCalculator {
         centreWindow(theView);
         CalcModel theModel = new CalcModel();
         CalcController theController = new CalcController(theView, theModel);
+        
         theView.setVisible(true);
 
     }

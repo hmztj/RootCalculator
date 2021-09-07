@@ -21,7 +21,7 @@ public class SLinkedList {
 
     }
 
-    //add a new node after position of curnode
+    //add a new node after position of curnode.
     public boolean isEmpty() {
         return head == null;
     }
