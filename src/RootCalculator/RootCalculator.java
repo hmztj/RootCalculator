@@ -1,14 +1,11 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Filename: RootCalculator
+ * Path: https://github.com/hmztj/RootCalculator
+ * Created Date: Monday, September 6th 2021, 10:11:07 pm
+ * Author: Hamza
  */
 package RootCalculator;
 
-/**
- *
- * @author Hamza
- */
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.JFrame;
