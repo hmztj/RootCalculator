@@ -20,6 +20,7 @@ public class RootCalculator {
 
         CalcView theView = new CalcView();
         centreWindow(theView);
+        
         CalcModel theModel = new CalcModel();
         CalcController theController = new CalcController(theView, theModel);
 
