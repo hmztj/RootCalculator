@@ -276,7 +276,7 @@ public class CalcView extends JFrame { // Main Frame (all elements reside here)
 
     }
 
-    public void setLinkedListTable(SLinkedList thelist) {
+    public void setLinkedListTable(SLinkedListModel thelist) {
 
         int index;
 
@@ -284,7 +284,7 @@ public class CalcView extends JFrame { // Main Frame (all elements reside here)
         Object[] rowData = new Object[7];
         index = 0;
 
-        SNode temp;
+        SNodeModel temp;
         if (thelist.isEmpty()) {
             System.out.println("List is empty");
         } else {

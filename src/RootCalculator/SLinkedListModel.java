@@ -1,23 +1,23 @@
 package RootCalculator;
 
-public class SLinkedList {
+public class SLinkedListModel {
 
-    protected SNode head;
+    protected SNodeModel head;
 
-    public SLinkedList() {
-        head = new SNode();
+    public SLinkedListModel() {
+        head = new SNodeModel();
     }
 
     //adds different calculated values from methods at assigned space.
     public void add(String x1, String fx1, String x2, String fx2, String x3, String fx3) {
-        SNode tail;
+        SNodeModel tail;
         tail = head;
 
         while (tail.getNext() != null) {
             tail = tail.getNext();
         }
         //insert new node at end of list
-        tail.setNext(new SNode(x1, fx1, x2, fx2, x3, fx3, null));
+        tail.setNext(new SNodeModel(x1, fx1, x2, fx2, x3, fx3, null));
 
     }
 

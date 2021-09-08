@@ -7,7 +7,7 @@ public class CalcModel {
     private double root = Double.MAX_VALUE; // final calculated value(root Approximation)
     private int index; // iterations counter (Number of loops to get desired root apprixmation)
     private String[][] dataArray = new String[500][8]; // Array to store calculated values.
-    final private SLinkedList dataList = new SLinkedList();
+    final private SLinkedListModel dataList = new SLinkedListModel();
     private XYSeries series, initialRange; // creates series of x and y values for graphical dataset.
 
     public XYSeries getInitialRange() {
@@ -308,7 +308,7 @@ public class CalcModel {
      * 
      * @return x1, x2, f(x1), f(x2), root, f(root)
      */
-    public SLinkedList getLinkedList() {
+    public SLinkedListModel getLinkedList() {
 
         return dataList;
 
